@@ -51,6 +51,12 @@
       scroll-behavior: smooth;
     }
 
+    body,
+    section,
+    header[id] {
+      scroll-margin-top: 96px;
+    }
+
     body {
       margin: 0;
       overflow-x: hidden;
@@ -133,6 +139,12 @@
       font-size: 0.98rem;
       font-weight: 700;
       letter-spacing: 0.02em;
+    }
+
+    .brand-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .brand-mark {
@@ -640,12 +652,14 @@
     }
   </style>
 </head>
-<body>
+<body id="top">
   <nav class="nav">
     <div class="container nav-inner">
       <div class="brand">
-        <div class="brand-mark">AN</div>
-        <div>Amirreza <span>Nezami</span></div>
+        <a class="brand-link" href="#top" title="Back to top">
+          <div class="brand-mark">AN</div>
+          <div>Amirreza <span>Nezami</span></div>
+        </a>
       </div>
       <div class="nav-links">
         <a href="#about">About</a>
