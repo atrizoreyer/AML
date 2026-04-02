@@ -328,6 +328,25 @@
       background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.03));
     }
 
+    .profile-photo-wrap {
+      padding: 10px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      filter: saturate(0.94) contrast(1.02);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+    }
+
     .kicker,
     .section-title {
       margin: 0 0 12px;
@@ -631,6 +650,14 @@
       </div>
 
       <aside class="hero-side">
+        <div class="profile-photo-wrap">
+          <img
+            class="profile-photo"
+            src="assets/Amirreza%20Nezami.png"
+            alt="Portrait of Amirreza Nezami"
+          />
+        </div>
+
         <div>
           <h2 class="kicker">Current Positioning</h2>
           <div class="snapshot-grid">
