@@ -291,6 +291,10 @@
       background: rgba(255, 255, 255, 0.02);
     }
 
+    .btn .action-icon {
+      margin-right: 8px;
+    }
+
     .hero-note {
       margin-top: 22px;
       padding-top: 18px;
@@ -531,6 +535,46 @@
       color: var(--accent);
     }
 
+    .action-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+      text-underline-offset: 4px;
+    }
+
+    .action-link .link-label {
+      border-bottom: 1px solid rgba(104, 224, 220, 0.28);
+      transition: border-color 0.18s ease, color 0.18s ease;
+    }
+
+    .action-link:hover .link-label {
+      border-color: rgba(238, 244, 255, 0.5);
+    }
+
+    .action-icon {
+      width: 16px;
+      height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: currentColor;
+      flex: 0 0 auto;
+    }
+
+    .action-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
     .footer {
       padding: 34px 0 56px;
       color: var(--muted);
@@ -633,9 +677,24 @@
         </div>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#cases">Review Case Studies</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
-          <a class="btn btn-secondary" href="#contact">Resume PDF</a>
+          <a class="btn btn-primary" href="#cases" title="Jump to the AML case study section">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 12h10"></path><path d="m13 8 4 4-4 4"></path></svg>
+            </span>
+            Review Case Studies
+          </a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer" title="Opens LinkedIn profile in a new tab">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M7 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M6 10v8"></path><path d="M10 18v-5.2c0-1.6 1.1-2.8 2.6-2.8s2.4 1 2.4 2.8V18"></path><path d="M10 12c.7-1.2 1.8-2 3.2-2"></path></svg>
+            </span>
+            Open LinkedIn
+          </a>
+          <a class="btn btn-secondary" href="assets/Amirreza_Nezami_Resume_AML_Financial_Crime_Risk_Analyst.pdf" target="_blank" rel="noopener noreferrer" title="Opens resume PDF in a new tab">
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+            </span>
+            Resume PDF
+          </a>
         </div>
 
         <div class="hero-note">
@@ -802,7 +861,7 @@
               <li>Compare volume, frequency, and branch usage against the expected customer profile and account purpose.</li>
               <li>Document what supports escalation and what additional facts would reduce uncertainty.</li>
             </ul>
-            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer">Open LinkedIn write-up</a>
+            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer" title="Opens the LinkedIn case study write-up in a new tab">Open LinkedIn write-up</a>
             <div class="case-foot">Escalation rationale documented against customer profile and activity pattern.</div>
           </article>
 
@@ -817,7 +876,7 @@
               <li>Separate evidence that reduces risk from evidence that is still missing or inconclusive.</li>
               <li>Write a decision trail that another reviewer can follow without guessing at the logic.</li>
             </ul>
-            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer">Open LinkedIn write-up</a>
+            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer" title="Opens the LinkedIn case study write-up in a new tab">Open LinkedIn write-up</a>
             <div class="case-foot">Screening decision supported by match factors, gaps, and final review outcome.</div>
           </article>
         </div>
@@ -841,8 +900,18 @@
           <div class="contact-card">
             <h4>Direct</h4>
             <div class="contact-list">
-              <a href="mailto:amirreza.nezami28@gmail.com">amirreza.nezami28@gmail.com</a>
-              <a href="tel:+16477412890">647-741-2890</a>
+              <a class="action-link" href="mailto:amirreza.nezami28@gmail.com" title="Opens your email app to send an email">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 7h16v10H4z"></path><path d="m4 8 8 6 8-6"></path></svg>
+                </span>
+                <span class="link-label">amirreza.nezami28@gmail.com</span>
+              </a>
+              <a class="action-link" href="tel:+16477412890" title="Starts a phone call on supported devices">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7.5 4.5h3l1.5 4-2 1.8a14 14 0 0 0 4.7 4.7l1.8-2 4 1.5v3c0 .8-.7 1.5-1.5 1.5A15.5 15.5 0 0 1 4.5 6c0-.8.7-1.5 1.5-1.5Z"></path></svg>
+                </span>
+                <span class="link-label">647-741-2890</span>
+              </a>
               <span>Toronto, Ontario</span>
             </div>
           </div>
@@ -850,8 +919,18 @@
           <div class="contact-card">
             <h4>Profiles</h4>
             <div class="contact-list">
-              <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Resume PDF coming soon</a>
+              <a class="action-link" href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer" title="Opens LinkedIn profile in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M6 10v8"></path><path d="M10 18v-5.2c0-1.6 1.1-2.8 2.6-2.8s2.4 1 2.4 2.8V18"></path><path d="M10 12c.7-1.2 1.8-2 3.2-2"></path></svg>
+                </span>
+                <span class="link-label">LinkedIn Profile</span>
+              </a>
+              <a class="action-link" href="assets/Amirreza_Nezami_Resume_AML_Financial_Crime_Risk_Analyst.pdf" target="_blank" rel="noopener noreferrer" title="Opens resume PDF in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+                </span>
+                <span class="link-label">Resume PDF</span>
+              </a>
             </div>
           </div>
         </div>
