@@ -235,6 +235,12 @@
       margin-top: 30px;
     }
 
+    .hero-role-target {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
     .btn {
       min-height: 48px;
       padding: 0 18px;
@@ -268,6 +274,25 @@
       max-width: 700px;
       color: var(--muted);
       font-size: 0.95rem;
+    }
+
+    .hero-meta {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      font-size: 0.88rem;
     }
 
     .hero-side {
@@ -425,6 +450,20 @@
       font-weight: 600;
     }
 
+    .case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 4px;
+      color: var(--accent);
+      font-size: 0.93rem;
+      font-weight: 600;
+    }
+
+    .case-link:hover {
+      color: var(--text);
+    }
+
     .contact-grid {
       grid-template-columns: 1fr 1fr;
     }
@@ -536,24 +575,34 @@
       <div class="hero-main">
         <div class="eyebrow">AML Portfolio | Toronto</div>
         <h1>
-          Financial crime analysis with
+          AML and financial crime review with
           <span class="headline-accent">clear judgment,</span>
-          structured case review, and strong written rationale.
+          structured documentation, and operational focus.
         </h1>
         <p class="subheadline">
-          Focused on AML, transaction monitoring, sanctions operations, and financial crime analysis.
-          This page shows how I approach review work: assess the facts, test customer-profile alignment, identify what matters,
-          and document conclusions in a way a second reviewer can follow quickly.
+          Focused on AML, transaction monitoring, sanctions operations, and financial crime review work.
+          This page shows how I approach alerts and case review: assess the facts, test profile alignment, identify relevant risk,
+          and document conclusions clearly.
         </p>
+
+        <div class="hero-role-target">
+          Target roles: AML Analyst, Transaction Monitoring Analyst, KYC Analyst, Sanctions Operations, Financial Crime Operations.
+        </div>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="#cases">Review Case Studies</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
+          <a class="btn btn-secondary" href="#contact">Resume PDF</a>
         </div>
 
         <div class="hero-note">
-          Built to give recruiters and hiring managers a fast read on analytical discipline, communication quality,
-          and fit for AML operations work.
+          Built to give recruiters and hiring managers a fast read on review style, written communication, and fit for AML operations work.
+        </div>
+
+        <div class="hero-meta">
+          <span>Current focus: AML and financial crime operations</span>
+          <span>Location: Toronto, Ontario</span>
+          <span>Open to AML and banking operations opportunities</span>
         </div>
       </div>
 
@@ -591,9 +640,8 @@
           <div class="section-intro">
             <h2 class="section-title">About</h2>
             <p>
-              My focus is AML and financial crime operations, with particular interest in transaction monitoring,
-              sanctions-related review, KYC alignment, and case documentation. I work best in detail-sensitive environments
-              where analysts are expected to review facts carefully, document decisions clearly, and escalate only when the rationale is defensible.
+              My focus is AML and financial crime operations, especially transaction monitoring, sanctions-related review, KYC alignment, and case documentation.
+              I am strongest in structured review, documentation, escalation logic, and consistency analysis, and I am well suited to detail-sensitive work.
             </p>
           </div>
         </div>
@@ -608,7 +656,7 @@
           <div class="section-intro">
             <h2 class="section-title">Recruiter Snapshot</h2>
             <p>
-              A quick scan of the working habits and review logic most relevant to AML hiring teams.
+              A quick scan of the review habits most relevant to AML hiring teams.
             </p>
           </div>
         </div>
@@ -617,25 +665,25 @@
           <div class="proof-item">
             <code>01 / monitoring</code>
             <strong>Pattern Recognition</strong>
-            <span>I look for transaction behavior that breaks from expected usage, stated purpose, or source-of-funds logic.</span>
+            <span>I review transaction activity for changes in volume, frequency, channel, and behavior that do not fit the expected account profile.</span>
           </div>
 
           <div class="proof-item">
             <code>02 / screening</code>
             <strong>Alert Triage Logic</strong>
-            <span>I separate facts, context, and unresolved risk so false positives and real concerns are not treated the same.</span>
+            <span>I separate confirmed facts, contextual information, and unresolved risk so alerts can be closed or escalated on clear grounds.</span>
           </div>
 
           <div class="proof-item">
             <code>03 / documentation</code>
             <strong>Case Writing</strong>
-            <span>I aim for notes that are concise, supportable, and easy for a second reviewer, QA team, or manager to audit.</span>
+            <span>I write case notes that are concise, supportable, and easy for a second reviewer, manager, or QA team to follow.</span>
           </div>
 
           <div class="proof-item">
             <code>04 / judgment</code>
             <strong>Escalation Discipline</strong>
-            <span>I care about whether the rationale can stand up to review, not only whether activity initially looks unusual.</span>
+            <span>I focus on whether the available facts support escalation, additional review, or closure rather than relying on initial appearance alone.</span>
           </div>
         </div>
       </div>
@@ -657,22 +705,22 @@
         <div class="focus-grid">
           <div class="focus-card">
             <h4>Transaction Monitoring</h4>
-            <p>Reviewing structuring signals, velocity changes, unusual cash activity, and profile-inconsistent movement patterns.</p>
+            <p>Reviewing structuring indicators, unusual cash activity, and transactional behavior that does not align with expected account use.</p>
           </div>
 
           <div class="focus-card">
             <h4>Sanctions Screening</h4>
-            <p>Assessing name-match relevance, contextual identifiers, and the difference between apparent similarity and meaningful match risk.</p>
+            <p>Assessing name-match alerts using contextual identifiers to separate weak similarity from relevant sanctions risk.</p>
           </div>
 
           <div class="focus-card">
             <h4>KYC / CDD Alignment</h4>
-            <p>Comparing expected customer behavior to observed activity so inconsistencies and documentation gaps become visible early.</p>
+            <p>Comparing stated customer profile and expected activity against observed behavior to identify inconsistencies and gaps.</p>
           </div>
 
           <div class="focus-card">
             <h4>Investigative Documentation</h4>
-            <p>Writing summaries that explain what was reviewed, what matters, what remains unclear, and why escalation is or is not justified.</p>
+            <p>Writing clear case summaries that show what was reviewed, what matters, and why escalation is or is not warranted.</p>
           </div>
         </div>
       </div>
@@ -686,7 +734,7 @@
           <div class="section-intro">
             <h2 class="section-title">Case Studies</h2>
             <p>
-              Short examples of how I would structure review, test assumptions, and document reasoning in common AML scenarios.
+              Short examples of how I would review common AML scenarios, test assumptions, and document conclusions.
             </p>
           </div>
         </div>
@@ -703,7 +751,8 @@
               <li>Compare volume, frequency, and branch usage against the expected customer profile and account purpose.</li>
               <li>Document what supports escalation and what additional facts would reduce uncertainty.</li>
             </ul>
-            <div class="case-foot">Write-up format ready for publication or recruiter review.</div>
+            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer">Open LinkedIn write-up</a>
+            <div class="case-foot">Escalation rationale documented against customer profile and activity pattern.</div>
           </article>
 
           <article class="case-card">
@@ -717,7 +766,8 @@
               <li>Separate evidence that reduces risk from evidence that is still missing or inconclusive.</li>
               <li>Write a decision trail that another reviewer can follow without guessing at the logic.</li>
             </ul>
-            <div class="case-foot">Built to demonstrate reasoning quality, not just outcome.</div>
+            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer">Open LinkedIn write-up</a>
+            <div class="case-foot">Screening decision supported by match factors, gaps, and final review outcome.</div>
           </article>
         </div>
       </div>
@@ -750,7 +800,7 @@
             <h4>Profiles</h4>
             <div class="contact-list">
               <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
-              <span>Resume link can be added here once the final version is ready.</span>
+              <a href="#" target="_blank" rel="noopener noreferrer">Resume PDF coming soon</a>
             </div>
           </div>
         </div>
@@ -760,7 +810,7 @@
 
   <footer class="footer">
     <div class="container">
-      Minimal single-page AML portfolio built for GitHub Pages.
+      AML and financial crime profile focused on transaction monitoring, screening, and case review.
     </div>
   </footer>
 </body>
