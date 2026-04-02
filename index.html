@@ -6,21 +6,40 @@
   <title>Amirreza Nezami | Financial Crime Risk</title>
   <meta
     name="description"
-    content="Amirreza Nezami, focused on financial crime risk, AML, transaction monitoring, sanctions screening, and investigative documentation."
+    content="AML-focused personal website for Amirreza Nezami, covering transaction monitoring, sanctions screening, KYC alignment, and case documentation."
+  />
+  <meta name="theme-color" content="#08111f" />
+  <meta property="og:title" content="Amirreza Nezami | Financial Crime Risk" />
+  <meta
+    property="og:description"
+    content="Single-page AML portfolio focused on recruiter clarity, case-based thinking, and financial crime risk positioning."
+  />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2308111f'/%3E%3Cpath d='M32 10l16 6v13c0 11-6.5 20-16 25-9.5-5-16-14-16-25V16l16-6z' fill='%2311c5bf' fill-opacity='.14' stroke='%2368e0dc' stroke-width='2.5'/%3E%3Cpath d='M27 23h10.5c3.6 0 6.5 2.8 6.5 6.3 0 3.6-2.9 6.4-6.5 6.4h-6V42H27V23zm4.5 4.1v4.7h5.5c1.5 0 2.4-.9 2.4-2.3 0-1.5-.9-2.4-2.4-2.4h-5.5z' fill='%23eef4ff'/%3E%3C/svg%3E"
   />
   <style>
     :root {
-      --bg: #0b1020;
-      --bg-soft: #121a2f;
-      --card: rgba(255, 255, 255, 0.04);
-      --card-border: rgba(255, 255, 255, 0.08);
-      --text: #e8edf7;
-      --muted: #9aa7c2;
-      --accent: #7dd3fc;
-      --accent-strong: #38bdf8;
-      --success: #86efac;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      --radius: 18px;
+      --bg: #08111f;
+      --bg-soft: #0d1829;
+      --bg-elevated: rgba(10, 22, 37, 0.9);
+      --panel: rgba(255, 255, 255, 0.04);
+      --panel-strong: rgba(255, 255, 255, 0.06);
+      --line: rgba(255, 255, 255, 0.1);
+      --text: #eef4ff;
+      --muted: #97a7be;
+      --accent: #68e0dc;
+      --accent-strong: #11c5bf;
+      --warm: #f6c47d;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.28);
+      --radius: 20px;
       --max: 1120px;
     }
 
@@ -34,13 +53,26 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
-        radial-gradient(circle at top right, rgba(125, 211, 252, 0.08), transparent 25%),
-        linear-gradient(180deg, #09101d 0%, #0b1020 100%);
+      font-family: "Manrope", "Segoe UI", sans-serif;
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
+      background:
+        radial-gradient(circle at top left, rgba(17, 197, 191, 0.14), transparent 28%),
+        radial-gradient(circle at 85% 15%, rgba(246, 196, 125, 0.08), transparent 22%),
+        linear-gradient(180deg, #07101c 0%, #08111f 48%, #0a1424 100%);
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 32px 32px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 82%);
     }
 
     a {
@@ -57,22 +89,39 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(11, 16, 32, 0.7);
+      backdrop-filter: blur(18px);
+      background: rgba(8, 17, 31, 0.76);
       border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .nav-inner {
+      min-height: 74px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      min-height: 72px;
+      justify-content: space-between;
+      gap: 16px;
     }
 
     .brand {
-      font-weight: 700;
-      letter-spacing: 0.2px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
       font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(180deg, rgba(104, 224, 220, 0.22), rgba(17, 197, 191, 0.08));
+      border: 1px solid rgba(104, 224, 220, 0.35);
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.8rem;
     }
 
     .brand span {
@@ -96,84 +145,104 @@
     }
 
     .hero {
-      padding: 84px 0 48px;
+      padding: 84px 0 30px;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
       gap: 28px;
       align-items: stretch;
     }
 
     .hero-main,
     .hero-side,
-    .section-card,
+    .section-shell,
     .focus-card,
     .case-card,
-    .contact-card {
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      box-shadow: var(--shadow);
+    .contact-card,
+    .proof-item {
       border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--panel);
     }
 
     .hero-main {
-      padding: 38px;
+      position: relative;
+      overflow: hidden;
+      padding: 40px;
+      background:
+        linear-gradient(145deg, rgba(104, 224, 220, 0.08), transparent 35%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+    }
+
+    .hero-main::after {
+      content: "";
+      position: absolute;
+      right: -60px;
+      top: -40px;
+      width: 220px;
+      height: 220px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(104, 224, 220, 0.16), transparent 70%);
     }
 
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      font-size: 0.9rem;
-      font-weight: 600;
+      gap: 10px;
       margin-bottom: 18px;
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .eyebrow::before {
       content: "";
-      width: 10px;
-      height: 10px;
+      width: 11px;
+      height: 11px;
       border-radius: 999px;
-      background: var(--success);
-      box-shadow: 0 0 14px rgba(134, 239, 172, 0.55);
+      background: var(--accent);
+      box-shadow: 0 0 18px rgba(104, 224, 220, 0.55);
     }
 
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2.25rem, 5vw, 4.25rem);
-      line-height: 1.05;
-      letter-spacing: -0.03em;
+      margin: 0 0 16px;
+      font-size: clamp(2.4rem, 5.1vw, 4.7rem);
+      line-height: 1;
+      letter-spacing: -0.05em;
+      max-width: 760px;
     }
 
     .headline-accent {
-      color: var(--accent);
+      color: var(--warm);
     }
 
     .subheadline {
       margin: 0;
       max-width: 760px;
       color: var(--muted);
-      font-size: 1.05rem;
+      font-size: 1.06rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
       min-height: 48px;
       padding: 0 18px;
       border-radius: 12px;
-      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
       transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
     }
 
@@ -182,8 +251,8 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent-strong), #0ea5e9);
-      color: #07111d;
+      color: #031014;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
     }
 
     .btn-secondary {
@@ -192,52 +261,77 @@
       background: rgba(255, 255, 255, 0.02);
     }
 
+    .hero-note {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .hero-side {
       padding: 28px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       gap: 18px;
+      justify-content: space-between;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.03));
     }
 
-    .hero-side h3,
+    .kicker,
     .section-title {
-      margin: 0 0 10px;
-      font-size: 1rem;
-      letter-spacing: 0.02em;
+      margin: 0 0 12px;
       color: var(--muted);
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .signal-list {
+    .snapshot-grid,
+    .proof-grid,
+    .focus-grid,
+    .case-grid,
+    .contact-grid {
       display: grid;
-      gap: 14px;
+      gap: 18px;
     }
 
-    .signal-item {
-      padding: 14px 16px;
-      border-radius: 14px;
+    .snapshot-grid {
+      gap: 12px;
+    }
+
+    .snapshot-item {
+      padding: 14px 15px;
+      border-radius: 16px;
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    .signal-item strong {
+    .snapshot-item strong,
+    .proof-item strong {
       display: block;
-      font-size: 1rem;
       margin-bottom: 4px;
+      font-size: 1rem;
     }
 
-    .signal-item span {
+    .snapshot-item span,
+    .proof-item span,
+    .focus-card p,
+    .case-card p,
+    .contact-card p,
+    .section-copy,
+    .section-intro p {
       color: var(--muted);
-      font-size: 0.95rem;
     }
 
     section {
       padding: 24px 0;
     }
 
-    .section-card {
+    .section-shell {
       padding: 30px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.025));
     }
 
     .section-top {
@@ -248,17 +342,29 @@
       margin-bottom: 24px;
     }
 
-    .section-top p {
-      margin: 0;
+    .section-intro {
       max-width: 760px;
-      color: var(--muted);
     }
 
-    .focus-grid,
-    .case-grid,
-    .contact-grid {
-      display: grid;
-      gap: 18px;
+    .section-intro p {
+      margin: 0;
+    }
+
+    .proof-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .proof-item {
+      padding: 22px 18px;
+      background: var(--panel-strong);
+    }
+
+    .proof-item code {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.82rem;
     }
 
     .focus-grid {
@@ -270,17 +376,10 @@
     }
 
     .focus-card h4,
-    .case-card h4 {
+    .case-card h4,
+    .contact-card h4 {
       margin: 0 0 8px;
-      font-size: 1.05rem;
-    }
-
-    .focus-card p,
-    .case-card p,
-    .contact-card p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 1.04rem;
     }
 
     .case-grid {
@@ -292,6 +391,7 @@
       display: flex;
       flex-direction: column;
       gap: 14px;
+      min-height: 100%;
     }
 
     .tag {
@@ -299,21 +399,30 @@
       width: fit-content;
       padding: 6px 10px;
       border-radius: 999px;
-      background: rgba(125, 211, 252, 0.1);
-      border: 1px solid rgba(125, 211, 252, 0.2);
+      border: 1px solid rgba(104, 224, 220, 0.22);
+      background: rgba(104, 224, 220, 0.08);
       color: var(--accent);
-      font-size: 0.82rem;
-      font-weight: 600;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
 
-    .case-link {
+    .case-points {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .case-points li + li {
+      margin-top: 8px;
+    }
+
+    .case-foot {
       margin-top: auto;
-      color: var(--text);
+      padding-top: 8px;
+      color: var(--warm);
+      font-size: 0.92rem;
       font-weight: 600;
-    }
-
-    .case-link:hover {
-      color: var(--accent);
     }
 
     .contact-grid {
@@ -330,7 +439,8 @@
       margin-top: 14px;
     }
 
-    .contact-list a {
+    .contact-list a,
+    .contact-list span {
       color: var(--text);
       word-break: break-word;
     }
@@ -340,29 +450,36 @@
     }
 
     .footer {
-      padding: 38px 0 54px;
+      padding: 34px 0 56px;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
+    @media (max-width: 1040px) {
+      .proof-grid,
+      .focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 980px) {
       .hero-grid,
-      .focus-grid,
       .case-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
       .hero {
-        padding-top: 48px;
+        padding-top: 52px;
       }
 
       .hero-main,
       .hero-side,
-      .section-card,
+      .section-shell,
       .focus-card,
       .case-card,
-      .contact-card {
+      .contact-card,
+      .proof-item {
         padding: 22px;
       }
     }
@@ -373,7 +490,7 @@
       }
 
       h1 {
-        font-size: 2.25rem;
+        font-size: 2.45rem;
       }
 
       .subheadline {
@@ -384,8 +501,15 @@
         flex-direction: column;
       }
 
-      .btn {
+      .btn,
+      .proof-grid,
+      .focus-grid {
         width: 100%;
+      }
+
+      .proof-grid,
+      .focus-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -393,9 +517,13 @@
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <div class="brand">Amirreza <span>Nezami</span></div>
+      <div class="brand">
+        <div class="brand-mark">AN</div>
+        <div>Amirreza <span>Nezami</span></div>
+      </div>
       <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#proof">Recruiter Snapshot</a>
         <a href="#focus">Focus Areas</a>
         <a href="#cases">Case Studies</a>
         <a href="#contact">Contact</a>
@@ -406,56 +534,109 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="hero-main">
-        <div class="eyebrow">Focused on Financial Crime Risk</div>
+        <div class="eyebrow">AML Portfolio | Toronto | GitHub Pages</div>
         <h1>
-          AML thinking,
-          <span class="headline-accent">structured judgment,</span><br />
-          evidence-first analysis.
+          Entry-level AML positioning with
+          <span class="headline-accent">clear judgment,</span>
+          structured case review, and strong written rationale.
         </h1>
         <p class="subheadline">
-          I am focused on transaction monitoring, sanctions screening, and financial crime risk analysis,
-          with a strong emphasis on investigative documentation, escalation logic, and consistency between customer profiles and transactional behavior.
+          I am targeting AML, transaction monitoring, sanctions operations, and financial crime analyst roles.
+          This page is built to show how I think: review the facts, test customer-profile alignment, identify what matters,
+          and document decisions in a way a second reviewer can follow quickly.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#cases">View Case Studies</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a class="btn btn-primary" href="#cases">Review Case Studies</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
+        </div>
+
+        <div class="hero-note">
+          The goal is simple: give a recruiter enough evidence in one page to see analytical discipline, communication quality,
+          and fit for AML operations work.
         </div>
       </div>
 
-      <div class="hero-side">
+      <aside class="hero-side">
         <div>
-          <h3>Current Positioning</h3>
-          <div class="signal-list">
-            <div class="signal-item">
-              <strong>Transaction Monitoring</strong>
-              <span>Pattern review, structuring indicators, profile inconsistency analysis.</span>
+          <h2 class="kicker">Current Positioning</h2>
+          <div class="snapshot-grid">
+            <div class="snapshot-item">
+              <strong>Target Roles</strong>
+              <span>AML Analyst, Transaction Monitoring Analyst, KYC Analyst, Sanctions Operations, Financial Crime Operations.</span>
             </div>
-            <div class="signal-item">
-              <strong>Sanctions Screening</strong>
-              <span>Name-match reasoning, escalation judgment, and false-positive awareness.</span>
+            <div class="snapshot-item">
+              <strong>Working Style</strong>
+              <span>Structured review, evidence-first reasoning, concise documentation, and defensible escalation logic.</span>
             </div>
-            <div class="signal-item">
-              <strong>Investigative Documentation</strong>
-              <span>Clear case summaries, rationale writing, and audit-ready thinking.</span>
+            <div class="snapshot-item">
+              <strong>Recruiter Signal</strong>
+              <span>I am strongest where attention to detail, alert review, and written rationale matter more than speed alone.</span>
             </div>
           </div>
         </div>
-      </div>
+
+        <div class="snapshot-item">
+          <strong>Location</strong>
+          <span>Toronto, Ontario. Open to AML, banking operations, and financial crime risk opportunities.</span>
+        </div>
+      </aside>
     </div>
   </header>
 
   <section id="about">
     <div class="container">
-      <div class="section-card">
+      <div class="section-shell">
         <div class="section-top">
-          <div>
+          <div class="section-intro">
             <h2 class="section-title">About</h2>
             <p>
-              I am transitioning into AML and financial crime operations with a focus on transaction monitoring,
-              sanctions-related review, and investigative documentation. My background in structured analysis,
-              documentation accuracy, and issue escalation supports disciplined, evidence-based decision-making in detail-sensitive environments.
+              I am transitioning into AML and financial crime operations with a practical interest in transaction monitoring,
+              sanctions-related review, KYC alignment, and case documentation. My background is strongest where detail,
+              consistency, and clear written reasoning matter. That makes me especially suited to environments where analysts
+              are expected to review facts carefully, document decisions cleanly, and escalate only when the rationale is defensible.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <div class="container">
+      <div class="section-shell">
+        <div class="section-top">
+          <div class="section-intro">
+            <h2 class="section-title">Recruiter Snapshot</h2>
+            <p>
+              A quick scan of the exact habits and review logic I want a hiring team to notice.
+            </p>
+          </div>
+        </div>
+
+        <div class="proof-grid">
+          <div class="proof-item">
+            <code>01 / monitoring</code>
+            <strong>Pattern Recognition</strong>
+            <span>I look for transaction behavior that breaks from expected usage, stated purpose, or source-of-funds logic.</span>
+          </div>
+
+          <div class="proof-item">
+            <code>02 / screening</code>
+            <strong>Alert Triage Logic</strong>
+            <span>I separate facts, context, and unresolved risk so false positives and real concerns are not treated the same.</span>
+          </div>
+
+          <div class="proof-item">
+            <code>03 / documentation</code>
+            <strong>Case Writing</strong>
+            <span>I aim for notes that are concise, supportable, and easy for a second reviewer, QA team, or manager to audit.</span>
+          </div>
+
+          <div class="proof-item">
+            <code>04 / judgment</code>
+            <strong>Escalation Discipline</strong>
+            <span>I care about whether the rationale can stand up to review, not only whether activity initially looks unusual.</span>
           </div>
         </div>
       </div>
@@ -464,12 +645,12 @@
 
   <section id="focus">
     <div class="container">
-      <div class="section-card">
+      <div class="section-shell">
         <div class="section-top">
-          <div>
+          <div class="section-intro">
             <h2 class="section-title">Focus Areas</h2>
             <p>
-              The areas I am actively building depth in through case-based analysis, documentation practice, and financial crime review scenarios.
+              The specific workstreams I am building depth in through scenario analysis, writing practice, and AML case review.
             </p>
           </div>
         </div>
@@ -477,22 +658,22 @@
         <div class="focus-grid">
           <div class="focus-card">
             <h4>Transaction Monitoring</h4>
-            <p>Reviewing transaction patterns for structuring, unusual activity, and risk indicators that warrant escalation.</p>
+            <p>Reviewing structuring signals, velocity changes, unusual cash activity, and profile-inconsistent movement patterns.</p>
           </div>
 
           <div class="focus-card">
             <h4>Sanctions Screening</h4>
-            <p>Assessing potential name matches, screening logic, and decision paths for true matches versus false positives.</p>
+            <p>Assessing name-match relevance, contextual identifiers, and the difference between apparent similarity and meaningful match risk.</p>
           </div>
 
           <div class="focus-card">
-            <h4>KYC/CDD Alignment</h4>
-            <p>Comparing expected customer activity with observed behavior to identify inconsistencies and documentation gaps.</p>
+            <h4>KYC / CDD Alignment</h4>
+            <p>Comparing expected customer behavior to observed activity so inconsistencies and documentation gaps become visible early.</p>
           </div>
 
           <div class="focus-card">
-            <h4>Case Documentation</h4>
-            <p>Writing clear investigative summaries with concise rationale, next steps, and support for escalation decisions.</p>
+            <h4>Investigative Documentation</h4>
+            <p>Writing summaries that explain what was reviewed, what matters, what remains unclear, and why escalation is or is not justified.</p>
           </div>
         </div>
       </div>
@@ -501,34 +682,44 @@
 
   <section id="cases">
     <div class="container">
-      <div class="section-card">
+      <div class="section-shell">
         <div class="section-top">
-          <div>
-            <h2 class="section-title">Featured Case Studies</h2>
+          <div class="section-intro">
+            <h2 class="section-title">Case Studies</h2>
             <p>
-              Selected examples of how I break down suspicious activity patterns, assess supporting information, and document conclusions.
+              Short examples of how I would structure review, test assumptions, and document reasoning in common AML scenarios.
             </p>
           </div>
         </div>
 
         <div class="case-grid">
-          <div class="case-card">
-            <span class="tag">Structuring</span>
-            <h4>Cash Deposits Below Reporting Thresholds</h4>
+          <article class="case-card">
+            <span class="tag">Structuring Review</span>
+            <h4>Repeated Cash Deposits Below Reporting Thresholds</h4>
             <p>
-              Analysis of repeated cash deposits over a short period, focused on pattern detection, customer-profile consistency, source-of-funds reasoning, and escalation logic.
+              A scenario built around repeated sub-threshold deposits over a compressed time window.
             </p>
-            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer">Add LinkedIn case study link →</a>
-          </div>
+            <ul class="case-points">
+              <li>Assess whether the activity pattern appears intentionally segmented rather than naturally occurring.</li>
+              <li>Compare volume, frequency, and branch usage against the expected customer profile and account purpose.</li>
+              <li>Document what supports escalation and what additional facts would reduce uncertainty.</li>
+            </ul>
+            <div class="case-foot">Write-up format ready for publication or recruiter review.</div>
+          </article>
 
-          <div class="case-card">
-            <span class="tag">Sanctions</span>
-            <h4>Potential Name Match Review</h4>
+          <article class="case-card">
+            <span class="tag">Sanctions Alert Review</span>
+            <h4>Potential Name Match With Limited Identifiers</h4>
             <p>
-              Review framework for sanctions-related alerts, including match assessment, contextual verification, false-positive awareness, and escalation decision support.
+              A sanctions-screening scenario focused on separating weak similarity from actionable match risk.
             </p>
-            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer">Add LinkedIn case study link →</a>
-          </div>
+            <ul class="case-points">
+              <li>Test name similarity against available identifiers such as geography, DOB, and customer context.</li>
+              <li>Separate evidence that reduces risk from evidence that is still missing or inconclusive.</li>
+              <li>Write a decision trail that another reviewer can follow without guessing at the logic.</li>
+            </ul>
+            <div class="case-foot">Built to demonstrate reasoning quality, not just outcome.</div>
+          </article>
         </div>
       </div>
     </div>
@@ -536,12 +727,12 @@
 
   <section id="contact">
     <div class="container">
-      <div class="section-card">
+      <div class="section-shell">
         <div class="section-top">
-          <div>
+          <div class="section-intro">
             <h2 class="section-title">Contact</h2>
             <p>
-              Open to AML, transaction monitoring, sanctions operations, financial crime, and banking operations opportunities.
+              If you are hiring for AML, transaction monitoring, KYC, sanctions operations, or financial crime support roles, I am open to conversation.
             </p>
           </div>
         </div>
@@ -559,8 +750,8 @@
           <div class="contact-card">
             <h4>Profiles</h4>
             <div class="contact-list">
-              <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Resume link or PDF</a>
+              <a href="https://www.linkedin.com/in/amirreza-nezami" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a>
+              <span>Resume link can be added here once the final version is ready.</span>
             </div>
           </div>
         </div>
@@ -570,7 +761,7 @@
 
   <footer class="footer">
     <div class="container">
-      Built for a focused AML and financial crime transition.
+      Minimal single-page AML portfolio built for GitHub Pages.
     </div>
   </footer>
 </body>
