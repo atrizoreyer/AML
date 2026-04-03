@@ -151,6 +151,55 @@
       gap: 12px;
     }
 
+    .brand-text {
+      display: inline-block;
+      color: rgba(238, 244, 255, 0.86);
+      background-image: linear-gradient(
+        100deg,
+        rgba(238, 244, 255, 0.76) 0%,
+        rgba(238, 244, 255, 0.76) 42%,
+        rgba(244, 221, 182, 0.96) 50%,
+        rgba(238, 244, 255, 0.8) 58%,
+        rgba(238, 244, 255, 0.76) 100%
+      );
+      background-size: 220% 100%;
+      background-position: 120% 50%;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: brand-text-shimmer 6.8s ease-in-out infinite;
+    }
+
+    .brand-text span {
+      color: inherit;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @supports not (-webkit-background-clip: text) {
+      .brand-text {
+        color: var(--text);
+        background: none;
+        animation: none;
+      }
+
+      .brand-text span {
+        color: var(--accent);
+      }
+    }
+
+    @keyframes brand-text-shimmer {
+      0%,
+      78%,
+      100% {
+        background-position: 120% 50%;
+      }
+
+      18%,
+      26% {
+        background-position: -20% 50%;
+      }
+    }
+
     .brand-mark {
       width: 34px;
       height: 34px;
@@ -979,7 +1028,7 @@
       <div class="brand">
         <a class="brand-link" href="#top" title="Back to top">
           <div class="brand-mark">AN</div>
-          <div>Amirreza <span>Nezami</span></div>
+          <div class="brand-text">Amirreza <span>Nezami</span></div>
         </a>
       </div>
       <input class="nav-toggle" id="nav-toggle" type="checkbox" />
