@@ -49,6 +49,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: clip;
     }
 
     body,
@@ -376,6 +377,7 @@
     .proof-grid,
     .focus-grid,
     .case-grid,
+    .cert-grid,
     .contact-grid {
       display: grid;
       gap: 18px;
@@ -478,6 +480,84 @@
       min-height: 100%;
     }
 
+    .evidence-preview {
+      width: 100%;
+      min-height: 168px;
+      margin: 4px 0 4px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02));
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .evidence-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .evidence-preview--image {
+      padding: 14px;
+    }
+
+    .evidence-preview--image img {
+      max-width: 260px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .evidence-preview--placeholder {
+      padding: 18px;
+      justify-content: flex-start;
+    }
+
+    .evidence-panel {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 12px;
+      border: 1px solid rgba(104, 224, 220, 0.16);
+      background:
+        linear-gradient(180deg, rgba(104, 224, 220, 0.06), rgba(255, 255, 255, 0.02));
+      padding: 14px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+    }
+
+    .evidence-kicker {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .evidence-list {
+      display: grid;
+      gap: 8px;
+    }
+
+    .evidence-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .evidence-row::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: rgba(104, 224, 220, 0.78);
+      flex: 0 0 auto;
+    }
+
     .tag {
       display: inline-block;
       width: fit-content;
@@ -509,18 +589,65 @@
       font-weight: 600;
     }
 
-    .case-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      margin-top: 4px;
-      color: var(--accent);
-      font-size: 0.93rem;
-      font-weight: 600;
+    .case-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 2px;
     }
 
-    .case-link:hover {
-      color: var(--text);
+    .cert-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cert-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      background: var(--panel);
+    }
+
+    .cert-meta {
+      display: grid;
+      gap: 8px;
+    }
+
+    .cert-meta h4 {
+      margin: 0;
+      font-size: 1.05rem;
+    }
+
+    .cert-line,
+    .cert-date {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cert-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 6px;
+    }
+
+    .cert-thumb {
+      width: 120px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+      flex: 0 0 auto;
+    }
+
+    .cert-thumb img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     .contact-grid {
@@ -617,12 +744,29 @@
       .focus-card,
       .case-card,
       .contact-card,
+      .cert-card,
       .proof-item {
         padding: 22px;
+      }
+
+      .cert-card {
+        grid-template-columns: 1fr;
+      }
+
+      body::before {
+        top: -18%;
+        left: -18%;
+        width: 136vw;
+        height: 180vh;
       }
     }
 
     @media (max-width: 640px) {
+      html,
+      body {
+        overflow-x: hidden;
+      }
+
       .nav-links {
         display: none;
       }
@@ -649,6 +793,13 @@
       .focus-grid {
         grid-template-columns: 1fr;
       }
+
+      body::before {
+        top: -12%;
+        left: -12%;
+        width: 124vw;
+        height: 165vh;
+      }
     }
   </style>
 </head>
@@ -666,6 +817,7 @@
         <a href="#proof">Recruiter Snapshot</a>
         <a href="#focus">Focus Areas</a>
         <a href="#cases">Case Studies</a>
+        <a href="#certification">Certification</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
@@ -726,7 +878,7 @@
         <div class="profile-photo-wrap">
           <img
             class="profile-photo"
-            src="assets/Amirreza%20Nezami.png"
+            src="assets/Amirreza Nezami.png"
             alt="Portrait of Amirreza Nezami"
           />
         </div>
@@ -870,28 +1022,121 @@
             <p>
               A scenario built around repeated sub-threshold deposits over a compressed time window.
             </p>
+  
+            
+
+            <a class="evidence-preview evidence-preview--image" href="assets/AML_Case_Study_Transaction_Monitoring_Amirreza_Nezami.jpg" target="_blank" rel="noopener noreferrer" title="Opens the investigation snapshot image in a new tab">
+              <img src="assets/AML_Case_Study_Transaction_Monitoring_Amirreza_Nezami.jpg" alt="Structuring Review case study investigation snapshot" />
+            </a>
+
+
+
+
             <ul class="case-points">
               <li>Assess whether the activity pattern appears intentionally segmented rather than naturally occurring.</li>
               <li>Compare volume, frequency, and branch usage against the expected customer profile and account purpose.</li>
               <li>Document what supports escalation and what additional facts would reduce uncertainty.</li>
             </ul>
-            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer" title="Opens the LinkedIn case study write-up in a new tab">Open LinkedIn write-up</a>
+            <div class="case-actions">
+              <a class="action-link" href="assets/AML_Case_Study_Transaction_Monitoring_Amirreza_Nezami.pdf" target="_blank" rel="noopener noreferrer" title="Opens the PDF case study in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+                </span>
+                <span class="link-label">View PDF case study</span>
+              </a>
+
+
+
+
+
+              <a class="action-link" href="assets/AML_Case_Study_Transaction_Monitoring_Amirreza_Nezami.jpg" target="_blank" rel="noopener noreferrer" title="Opens the investigation snapshot image in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="m8 13 2.5-2.5L14 14l2-2 4 4"></path><path d="M9 10h.01"></path></svg>
+                </span>
+                <span class="link-label">View investigation snapshot</span>
+              </a>
+
+
+
+
+
+            <a class="action-link" href="https://www.linkedin.com/in/amirreza-nezami/overlay/1772851392298/single-media-viewer/?profileId=ACoAAA4Ssr4BCJEQAhmt_dB_KXGpzJIf4hjCS3g" target="_blank" rel="noopener noreferrer" title="Opens the LinkedIn case study write-up in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M6 10v8"></path><path d="M10 18v-5.2c0-1.6 1.1-2.8 2.6-2.8s2.4 1 2.4 2.8V18"></path><path d="M10 12c.7-1.2 1.8-2 3.2-2"></path></svg>
+                </span>
+                <span class="link-label">View LinkedIn case write-up</span>
+              </a>
+            </div>
             <div class="case-foot">Escalation rationale documented against customer profile and activity pattern.</div>
           </article>
 
           <article class="case-card">
-            <span class="tag">Sanctions Alert Review</span>
-            <h4>Potential Name Match With Limited Identifiers</h4>
+            <span class="tag">Fraud / Money Mule Review</span>
+            <h4>Money Mule Network and Potential Fraud Proceeds</h4>
             <p>
-              A sanctions-screening scenario focused on separating weak similarity from actionable match risk.
+              A case focused on linked-account behavior, layered transfers, and potential fraud proceeds moving through connected parties.
             </p>
+            <a class="evidence-preview evidence-preview--image" href="assets/AML_Money_Mule_Case_Study_Amirreza_Nezami.jpeg" target="_blank" rel="noopener noreferrer" title="Opens the investigation snapshot image in a new tab">
+              <img src="assets/AML_Money_Mule_Case_Study_Amirreza_Nezami.jpeg" alt="Money mule case study investigation snapshot" />
+            </a>
             <ul class="case-points">
-              <li>Test name similarity against available identifiers such as geography, DOB, and customer context.</li>
-              <li>Separate evidence that reduces risk from evidence that is still missing or inconclusive.</li>
-              <li>Write a decision trail that another reviewer can follow without guessing at the logic.</li>
+              <li>Review account relationships, transaction flow, and recipient patterns for signs of coordinated activity.</li>
+              <li>Assess whether the movement of funds is consistent with ordinary use or suggests fraud-linked mule behavior.</li>
+              <li>Document the indicators supporting further review, escalation, and potential fraud concern.</li>
             </ul>
-            <a class="case-link" href="#" target="_blank" rel="noopener noreferrer" title="Opens the LinkedIn case study write-up in a new tab">Open LinkedIn write-up</a>
-            <div class="case-foot">Screening decision supported by match factors, gaps, and final review outcome.</div>
+            <div class="case-actions">
+              <a class="action-link" href="assets/AML_Money_Mule_Case_Study_Amirreza_Nezami.pdf" target="_blank" rel="noopener noreferrer" title="Opens the PDF case study in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+                </span>
+                <span class="link-label">View PDF case study</span>
+              </a>
+              <a class="action-link" href="assets/AML_Money_Mule_Case_Study_Amirreza_Nezami.jpeg" target="_blank" rel="noopener noreferrer" title="Opens the investigation snapshot image in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4z"></path><path d="m8 13 2.5-2.5L14 14l2-2 4 4"></path><path d="M9 10h.01"></path></svg>
+                </span>
+                <span class="link-label">View investigation snapshot</span>
+              </a>
+            <a class="action-link" href="https://www.linkedin.com/in/amirreza-nezami/overlay/1773265671244/single-media-viewer/?profileId=ACoAAA4Ssr4BCJEQAhmt_dB_KXGpzJIf4hjCS3g" target="_blank" rel="noopener noreferrer" title="Opens the LinkedIn case study write-up in a new tab">
+                <span class="action-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M7 8a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"></path><path d="M6 10v8"></path><path d="M10 18v-5.2c0-1.6 1.1-2.8 2.6-2.8s2.4 1 2.4 2.8V18"></path><path d="M10 12c.7-1.2 1.8-2 3.2-2"></path></svg>
+                </span>
+                <span class="link-label">View LinkedIn case write-up</span>
+              </a>
+            </div>
+            <div class="case-foot">Review documented against transaction flow, linked activity, and potential fraud indicators.</div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certification">
+    <div class="container">
+      <div class="section-shell">
+        <div class="section-top">
+          <div class="section-intro">
+            <h2 class="section-title">Certification</h2>
+            <p>
+              A completed AML course certificate supporting my current focus on financial crime review, transaction monitoring, and AML fundamentals.
+            </p>
+          </div>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-meta">
+              <h4>Anti-Money Laundering</h4>
+              <div class="cert-line">Coursera | Authorized by Alfaisal University and KLD</div>
+              <div class="cert-date">Completed March 4, 2026</div>
+              <div class="cert-actions">
+                <a class="case-link" href="assets/Amirreza_Nezami_Anti_Money_Laundering_Coursera.pdf" target="_blank" rel="noopener noreferrer" title="Opens the course certificate PDF in a new tab">View course certificate</a>
+              </div>
+            </div>
+
+            <a class="cert-thumb" href="assets/Amirreza Nezami - Anti-Money Laundering (AML), Coursera G6WN0U4VA3SJ.jpeg" target="_blank" rel="noopener noreferrer" title="Opens the certificate preview image in a new tab">
+              <img src="assets/Amirreza Nezami - Anti-Money Laundering (AML), Coursera G6WN0U4VA3SJ.jpeg" alt="Amirreza Nezami'sAML course certificate preview" />
+            </a>
           </article>
         </div>
       </div>
