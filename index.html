@@ -22,6 +22,7 @@
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap"
     rel="stylesheet"
   />
+  <link rel="stylesheet" href="style.css" />
   <link
     rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2308111f'/%3E%3Cpath d='M32 10l16 6v13c0 11-6.5 20-16 25-9.5-5-16-14-16-25V16l16-6z' fill='%2311c5bf' fill-opacity='.14' stroke='%2368e0dc' stroke-width='2.5'/%3E%3Cpath d='M27 23h10.5c3.6 0 6.5 2.8 6.5 6.3 0 3.6-2.9 6.4-6.5 6.4h-6V42H27V23zm4.5 4.1v4.7h5.5c1.5 0 2.4-.9 2.4-2.3 0-1.5-.9-2.4-2.4-2.4h-5.5z' fill='%23eef4ff'/%3E%3C/svg%3E"
@@ -520,6 +521,7 @@
 
     .snapshot-grid,
     .proof-grid,
+    .experience-grid,
     .focus-grid,
     .case-grid,
     .cert-grid,
@@ -585,6 +587,10 @@
 
     .proof-grid {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    .experience-grid {
+      grid-template-columns: 1fr;
     }
 
     .proof-item {
@@ -917,6 +923,10 @@
       .focus-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .experience-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 980px) {
@@ -1055,6 +1065,7 @@
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#proof">Recruiter Snapshot</a>
+        <a href="#experience">Experience</a>
         <a href="#focus">Focus Areas</a>
         <a href="#cases">Case Studies</a>
         <a href="#certification">Certification</a>
@@ -1160,7 +1171,7 @@ Current focus: developing practical AML review skills through case analysis, tra
       <div class="section-shell">
         <div class="section-top">
           <div class="section-intro">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title title-shimmer">About</h2>
             <p>
               My focus is AML and financial crime operations, especially transaction monitoring, sanctions-related review, KYC alignment, and case documentation.
               I focus on developing strong capabilities in structured review, documentation, escalation logic, and consistency analysis
@@ -1176,7 +1187,7 @@ Current focus: developing practical AML review skills through case analysis, tra
       <div class="section-shell">
         <div class="section-top">
           <div class="section-intro">
-            <h2 class="section-title">Recruiter Snapshot</h2>
+            <h2 class="section-title title-shimmer">Recruiter Snapshot</h2>
             <p>
               A quick scan of the review habits most relevant to AML hiring teams.
             </p>
@@ -1212,12 +1223,97 @@ Current focus: developing practical AML review skills through case analysis, tra
     </div>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <section id="experience">
+    <div class="container">
+      <div class="section-shell">
+        <div class="section-top">
+          <div class="section-intro">
+            <h2 class="section-title title-shimmer">Experience</h2>
+            <p>
+              Operational, documentation, banking support, and AML practice experience aligned with financial crime review work.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-grid">
+          <div class="proof-item">
+            <code>Jan 2024 - Present</code>
+            <strong>Project Administrator, IT & Digital Projects | HSA Inc.</strong>
+            <span>
+              Review records, workflow exceptions, and multi-step documentation across stakeholder groups, flag gaps and inconsistencies, maintain audit-ready tracking logs, and support accurate follow-up within SLA-driven workflows.
+            </span>
+          </div>
+
+          <div class="proof-item">
+            <code>Jan 2026 - Present</code>
+            <strong>AML Case Analysis & Transaction Monitoring | Independent Practice</strong>
+            <span>
+              Review simulated AML scenarios involving transaction monitoring, structuring indicators, KYC alignment, sanctions context, and unusual activity documentation, with clear close or escalate reasoning.
+            </span>
+          </div>
+
+          <div class="proof-item">
+            <code>Aug 2020 - Sep 2023</code>
+            <strong>UX Analyst, IT & App Research | Hami</strong>
+            <span>
+              Conducted workflow analysis and structured documentation to identify process gaps, recurring inconsistencies, and issues affecting digital service delivery.
+            </span>
+          </div>
+
+          <div class="proof-item">
+            <code>Jan 2019 - Jan 2020</code>
+            <strong>Customer Service Representative | TAT Bank Call Center</strong>
+            <span>
+              Authenticated customer identity, reviewed account information before disclosure, and handled account and transaction-related inquiries with attention to confidentiality and escalation requirements.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section id="focus">
     <div class="container">
       <div class="section-shell">
         <div class="section-top">
           <div class="section-intro">
-            <h2 class="section-title">Focus Areas</h2>
+            <h2 class="section-title title-shimmer">Focus Areas</h2>
             <p>
               The workstreams I am focused on through scenario analysis, writing practice, and AML case review.
             </p>
@@ -1254,7 +1350,7 @@ Current focus: developing practical AML review skills through case analysis, tra
       <div class="section-shell">
         <div class="section-top">
           <div class="section-intro">
-            <h2 class="section-title">Case Studies</h2>
+            <h2 class="section-title title-shimmer">Case Studies</h2>
             <p>
               Short examples of how I would review common AML scenarios, test assumptions, and document conclusions.
             </p>
@@ -1360,17 +1456,67 @@ The following scenarios are independently developed case studies designed to sim
     </div>
   </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <section id="certification">
     <div class="container">
       <div class="section-shell">
         <div class="section-top">
           <div class="section-intro">
-            <h2 class="section-title">Certification</h2>
+            <h2 class="section-title title-shimmer">Education & Certifications</h2>
             <p>
               A completed AML course certificate supporting my current focus on financial crime review, transaction monitoring, and AML fundamentals.
             </p>
           </div>
         </div>
+
+
+
+
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-meta">
+              <h4>Mastering Financial Compliance and Anti-Money Laundering</h4>
+              <div class="cert-line">LinkedIn Learning</div>
+              <div class="cert-date">Completed May 3, 2026</div>
+              <div class="cert-actions">
+                <a class="action-link" href="assets/CertificateOfCompletion_Mastering Financial Compliance and AntiMoney Laundering.pdf" target="_blank" rel="noopener noreferrer" title="Opens the course certificate PDF in a new tab">
+                  <span class="action-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+                  </span>
+                  <span class="link-label">View course certificate</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="cert-thumb" href="assets/CertificateOfCompletion_Mastering Financial Compliance and AntiMoney Laundering.png" target="_blank" rel="noopener noreferrer" title="Opens the certificate preview image in a new tab">
+              <img src="assets/CertificateOfCompletion_Mastering Financial Compliance and AntiMoney Laundering.png" alt="Amirreza Nezami's AML course certificate preview" />
+            </a>
+          </article>
+        </div>
+
+
+
 
         <div class="cert-grid">
           <article class="cert-card">
@@ -1393,16 +1539,104 @@ The following scenarios are independently developed case studies designed to sim
             </a>
           </article>
         </div>
+
+
+
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-meta">
+              <h4>Suspicious Transaction Reporting (STR) - US</h4>
+              <div class="cert-line">SkillUp</div>
+              <div class="cert-date">Completed April 24, 2026</div>
+              <div class="cert-actions">
+                <a class="action-link" href="assets/Amirreza Nezami - Suspicious Transaction Reporting (STR) Coursera ZY0KWKTHC5WL.pdf" target="_blank" rel="noopener noreferrer" title="Opens the course certificate PDF in a new tab">
+                  <span class="action-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+                  </span>
+                  <span class="link-label">View course certificate</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="cert-thumb" href="assets/Suspicious Transaction Reporting (STR) - US - ZY0KWKTHC5WL.jpeg" target="_blank" rel="noopener noreferrer" title="Opens the certificate preview image in a new tab">
+              <img src="assets/Suspicious Transaction Reporting (STR) - US - ZY0KWKTHC5WL.jpeg" alt="Amirreza Nezami's STR course certificate preview" />
+            </a>
+          </article>
+        </div>
+
+
+
+        <div class="cert-grid">
+          <article class="cert-card">
+            <div class="cert-meta">
+              <h4>The ABCs of the Banking and Insurance Business: AML, KYC, the NAIC, IFRS, and More</h4>
+              <div class="cert-line">Coursera | Authorized by Alfaisal University and KLD</div>
+              <div class="cert-date">Completed March 4, 2026</div>
+              <div class="cert-actions">
+                <a class="action-link" href="assets/CertificateOfCompletion_The ABCs of the Banking and Insurance Business AML KYC the NAIC IFRS and More.pdf" target="_blank" rel="noopener noreferrer" title="Opens the course certificate PDF in a new tab">
+                  <span class="action-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M8 3h6l4 4v14H8z"></path><path d="M14 3v4h4"></path><path d="M10 14h4"></path><path d="M10 17h4"></path></svg>
+                  </span>
+                  <span class="link-label">View course certificate</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="cert-thumb" href="assets/CertificateOfCompletion_The ABCs of the Banking and Insurance Business AML KYC the NAIC IFRS and More.png" target="_blank" rel="noopener noreferrer" title="Opens the certificate preview image in a new tab">
+              <img src="assets/CertificateOfCompletion_The ABCs of the Banking and Insurance Business AML KYC the NAIC IFRS and More.png" alt="Amirreza Nezami's AML course certificate preview" />
+            </a>
+          </article>
+        </div>
+
+
+        <div class="cert-grid">
+          <article class="cert-card cert-card-simple">
+            <div class="cert-meta">
+              <h4>B.Sc. Industrial Engineering</h4>
+              <div class="cert-line">Azad University | Systems Planning and Analysis</div>
+              <div class="cert-date">Foundation in process analysis, structured problem-solving, systems thinking, and data review.</div>
+            </div>
+          </article>
+        </div>
+
+
       </div>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <section id="contact">
     <div class="container">
       <div class="section-shell">
         <div class="section-top">
           <div class="section-intro">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title title-shimmer">Contact</h2>
             <p>
               Open to AML, transaction monitoring, KYC, and financial crime operations roles within banking and regulated environments.
             </p>

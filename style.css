@@ -1,0 +1,59 @@
+.title-shimmer {
+
+  display: inline-block;
+
+  color: rgba(245, 248, 255, 0.92);
+
+  background-image: linear-gradient(
+
+    100deg,
+
+    rgba(245, 248, 255, 0.82) 0%,
+
+    rgba(245, 248, 255, 0.82) 40%,
+
+    rgba(255, 244, 201, 1) 50%,
+
+    rgba(255, 255, 255, 0.98) 56%,
+
+    rgba(245, 248, 255, 0.84) 62%,
+
+    rgba(245, 248, 255, 0.82) 100%
+
+  );
+
+  background-size: 220% 100%;
+
+  background-position: 120% 50%;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: brand-text-shimmer 5s linear infinite alternate;
+
+}
+
+@supports not (-webkit-background-clip: text) {
+
+  .title-shimmer {
+
+    color: var(--text);
+
+    background: none;
+
+    animation: none;
+
+  }
+
+}
+
+.cert-grid + .cert-grid {
+  margin-top: 18px;
+}
+
+.cert-card-simple {
+  grid-template-columns: 1fr;
+}
