@@ -613,6 +613,25 @@
       color: var(--text);
     }
 
+    .proof-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 4px 8px;
+      margin-bottom: 4px;
+    }
+
+    .proof-heading strong {
+      display: inline;
+      margin-bottom: 0;
+      font-size: 1.08rem;
+    }
+
+    .proof-heading .company {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
     .focus-grid {
       grid-template-columns: repeat(4, 1fr);
     }
@@ -1251,7 +1270,10 @@
       <div class="experience-grid">
         <div class="proof-item">
           <code>Jan 2024 - Present</code>
-          <strong>Project Administrator | HSA Inc.</strong>
+          <div class="proof-heading">
+            <strong>Administrative Operations & Finance Support Associate</strong>
+            <span class="company">| HSA Inc.</span>
+          </div>
           <span>
             Review workflow records, documentation gaps, exceptions, and non-standard items across stakeholder groups, maintain audit-ready trackers and structured updates, coordinate SLA-driven follow-ups, and support documentation accuracy, process control, and reporting visibility.
           </span>
@@ -1259,15 +1281,21 @@
 
         <div class="proof-item">
           <code>Sep 2022 - Dec 2023</code>
-          <strong>Administrative & Financial Support Assistant | SimaStyle</strong>
+          <div class="proof-heading">
+            <strong>Financial & Administrative Support Associate</strong>
+            <span class="company">| SimaStyle</span>
+          </div>
           <span>
             Organized bills, account records, tax-related documents, vendor communications, and follow-up items for a small business owner. Reviewed expense records, credit obligations, Equifax information, and suspicious emails to help identify documentation gaps, unclear items, and potential fraud or scam risks.
           </span>
         </div>
 
         <div class="proof-item">
-          <code>May 2020 - May 2022</code>
-          <strong>Financial Services Client Support Representative | TAT Investing Co. / Ayandeh Bank</strong>
+          <code>Mar 2019 - May 2022</code>
+          <div class="proof-heading">
+            <strong>Branch Banking Teller & Contact Centre Representative</strong>
+            <span class="company">| Ayandeh Bank</span>
+          </div>
           <span>
             Verified customer identity, reviewed account-related information before disclosure, handled account and service inquiries, documented missing information and unresolved items, and escalated incomplete, sensitive, unusual, or complex cases based on defined financial-service procedures.
           </span>
